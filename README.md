@@ -55,7 +55,7 @@ No providers.
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_azurerm_logic_app_workflow"></a> [azurerm\_logic\_app\_workflow](#module\_azurerm\_logic\_app\_workflow) | github.com/DFE-Digital/terraform-azurerm-logic-app-workflow-slack | n/a |
+| <a name="module_azurerm_logic_app_workflow"></a> [azurerm\_logic\_app\_workflow](#module\_azurerm\_logic\_app\_workflow) | github.com/DFE-Digital/terraform-azurerm-logic-app-workflow-slack | v0.1.1 |
 
 ## Resources
 
@@ -68,7 +68,7 @@ No resources.
 | <a name="input_azure_location"></a> [azure\_location](#input\_azure\_location) | Azure location in which to launch resources. | `string` | n/a | yes |
 | <a name="input_environment"></a> [environment](#input\_environment) | Environment name. Will be used along with `project_name` as a prefix for all resources. | `string` | n/a | yes |
 | <a name="input_project_name"></a> [project\_name](#input\_project\_name) | Project name. Will be used along with `environment` as a prefix for all resources. | `string` | n/a | yes |
-| <a name="input_resource_group_bins"></a> [resource\_group\_bins](#input\_resource\_group\_bins) | Slack webhook destinations keyed by the Resource Group you want to collect webhooks from | <pre>map(<br>    object({<br>      slack_webhook_url = string<br>      channel_id        = string<br>    })<br>  )</pre> | n/a | yes |
+| <a name="input_resource_group_target_webhooks"></a> [resource\_group\_target\_webhooks](#input\_resource\_group\_target\_webhooks) | Slack webhook destinations keyed by the Resource Group you want to collect webhooks from | <pre>map(<br>    object({<br>      webhook_url = string<br>      channel_id  = string<br>    })<br>  )</pre> | n/a | yes |
 | <a name="input_tags"></a> [tags](#input\_tags) | Tags to be applied to all resources | `map(string)` | n/a | yes |
 
 ## Outputs
