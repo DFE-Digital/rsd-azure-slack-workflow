@@ -28,3 +28,20 @@ variable "resource_group_target_webhooks" {
   )
   sensitive = true
 }
+
+variable "key_vault_access_users" {
+  description = "A list of Active Directory user objects that should be permitted to access the Key Vault that the tfvars are stored in"
+  default     = []
+  type        = list(string)
+}
+
+variable "key_vault_access_ipv4" {
+  description = "A list of IPv4 Addresses that are allowed to connect to the Key Vault"
+  default     = []
+  type        = list(string)
+}
+
+variable "tfvars_filename" {
+  description = "Name of the Terraform var file you want to push to Key Vault"
+  type        = string
+}
