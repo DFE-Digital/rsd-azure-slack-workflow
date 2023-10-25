@@ -45,3 +45,22 @@ variable "tfvars_filename" {
   description = "Name of the Terraform var file you want to push to Key Vault"
   type        = string
 }
+
+variable "route_waf_logs" {
+  description = "Do you want to route WAF Logs to a separate Slack channel?"
+  type        = bool
+  default     = false
+}
+
+variable "waf_logs_channel_id" {
+  description = "Slack webhook destination channel ID for WAF Logs"
+  type        = string
+  default     = ""
+}
+
+variable "waf_logs_webhook_url" {
+  description = "Slack webhook URL for WAF Logs"
+  type        = string
+  default     = ""
+  sensitive   = true
+}
