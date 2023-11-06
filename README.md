@@ -72,8 +72,11 @@ No resources.
 | <a name="input_key_vault_access_users"></a> [key\_vault\_access\_users](#input\_key\_vault\_access\_users) | A list of Active Directory user objects that should be permitted to access the Key Vault that the tfvars are stored in | `list(string)` | `[]` | no |
 | <a name="input_project_name"></a> [project\_name](#input\_project\_name) | Project name. Will be used along with `environment` as a prefix for all resources. | `string` | n/a | yes |
 | <a name="input_resource_group_target_webhooks"></a> [resource\_group\_target\_webhooks](#input\_resource\_group\_target\_webhooks) | Slack webhook destinations keyed by the Resource Group you want to collect webhooks from | <pre>map(<br>    object({<br>      webhook_url = string<br>      channel_id  = string<br>    })<br>  )</pre> | n/a | yes |
+| <a name="input_route_waf_logs"></a> [route\_waf\_logs](#input\_route\_waf\_logs) | Do you want to route WAF Logs to a separate Slack channel? | `bool` | `false` | no |
 | <a name="input_tags"></a> [tags](#input\_tags) | Tags to be applied to all resources | `map(string)` | n/a | yes |
 | <a name="input_tfvars_filename"></a> [tfvars\_filename](#input\_tfvars\_filename) | Name of the Terraform var file you want to push to Key Vault | `string` | n/a | yes |
+| <a name="input_waf_logs_channel_id"></a> [waf\_logs\_channel\_id](#input\_waf\_logs\_channel\_id) | Slack webhook destination channel ID for WAF Logs | `string` | `""` | no |
+| <a name="input_waf_logs_webhook_url"></a> [waf\_logs\_webhook\_url](#input\_waf\_logs\_webhook\_url) | Slack webhook URL for WAF Logs | `string` | `""` | no |
 
 ## Outputs
 

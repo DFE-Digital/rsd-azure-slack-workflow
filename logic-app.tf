@@ -4,6 +4,9 @@ module "azurerm_logic_app_workflow" {
   project_name                   = local.project_name
   azure_location                 = local.azure_location
   resource_group_target_webhooks = local.resource_group_target_webhooks
+  route_waf_logs                 = local.route_waf_logs
+  waf_logs_channel_id            = local.waf_logs_channel_id
+  waf_logs_webhook_url           = local.waf_logs_webhook_url
 
   tags = local.tags
 }
