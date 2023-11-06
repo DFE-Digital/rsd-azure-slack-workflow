@@ -1,5 +1,5 @@
 module "azurerm_logic_app_workflow" {
-  source                         = "github.com/DFE-Digital/terraform-azurerm-logic-app-workflow-slack?ref=v0.2.0"
+  source                         = "github.com/DFE-Digital/terraform-azurerm-logic-app-workflow-slack?ref=v0.2.1"
   environment                    = local.environment
   project_name                   = local.project_name
   azure_location                 = local.azure_location
