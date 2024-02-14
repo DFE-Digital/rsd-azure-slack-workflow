@@ -55,8 +55,8 @@ No providers.
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_azurerm_key_vault"></a> [azurerm\_key\_vault](#module\_azurerm\_key\_vault) | github.com/DFE-Digital/terraform-azurerm-key-vault-tfvars | v0.2.2 |
-| <a name="module_azurerm_logic_app_workflow"></a> [azurerm\_logic\_app\_workflow](#module\_azurerm\_logic\_app\_workflow) | github.com/DFE-Digital/terraform-azurerm-logic-app-workflow-slack | v0.2.0 |
+| <a name="module_azurerm_key_vault"></a> [azurerm\_key\_vault](#module\_azurerm\_key\_vault) | github.com/DFE-Digital/terraform-azurerm-key-vault-tfvars | v0.3.0 |
+| <a name="module_azurerm_logic_app_workflow"></a> [azurerm\_logic\_app\_workflow](#module\_azurerm\_logic\_app\_workflow) | github.com/DFE-Digital/terraform-azurerm-logic-app-workflow-slack | v0.2.2 |
 
 ## Resources
 
