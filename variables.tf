@@ -22,17 +22,13 @@ variable "resource_group_target_webhooks" {
   description = "Slack webhook destinations keyed by the Resource Group you want to collect webhooks from"
   type = map(
     object({
-      webhook_url = string
-      channel_id  = string
+      webhook_url      = string
+      channel_id       = string
+      sev1_channel_id  = optional(string, "")
+      sev1_webhook_url = optional(string, "")
     })
   )
   sensitive = true
-}
-
-variable "key_vault_access_users" {
-  description = "A list of Active Directory user objects that should be permitted to access the Key Vault that the tfvars are stored in"
-  default     = []
-  type        = list(string)
 }
 
 variable "key_vault_access_ipv4" {
