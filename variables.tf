@@ -40,15 +40,22 @@ variable "tags" {
 }
 
 variable "resource_group_target_webhooks" {
-  description = "Slack webhook destinations keyed by the Resource Group you want to collect webhooks from"
+  description = <<DOC
+  Slack webhook destinations keyed by the Resource Group you want to collect webhooks from.
+  Include an optional override for sev1 alarms by populating 'sev1_channel_id' and 'sev1_webhook_url'.
+  If 'message_tag' is populated, it will be included as the first message line in Slack. You can use this for tagging users
+  DOC
   type = map(
     object({
-      webhook_url      = string
       channel_id       = string
+      webhook_url      = string
+      message_tag      = optional(string, "<!here>")
       sev1_channel_id  = optional(string, "")
       sev1_webhook_url = optional(string, "")
+      sev1_message_tag = optional(string, "<!channel>")
     })
   )
+  default   = {}
   sensitive = true
 }
 
