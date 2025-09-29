@@ -10,3 +10,15 @@ module "azurerm_logic_app_workflow" {
 
   tags = local.tags
 }
+
+module "azurerm_logic_app_workflow_teams" {
+  source                         = "github.com/DFE-Digital/terraform-azurerm-logic-app-workflow-teams?ref=v0.1.0"
+  environment                    = local.environment
+  project_name                   = "${local.project_name}-teams"
+  azure_location                 = local.azure_location
+  resource_group_target_webhooks = local.resource_group_teams_target_webhooks
+  route_waf_logs                 = local.route_waf_logs
+  waf_logs_webhook_url           = local.waf_logs_teams_webhook_url
+
+  tags = local.tags
+}
