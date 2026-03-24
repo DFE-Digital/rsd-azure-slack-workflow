@@ -62,6 +62,26 @@ variable "resource_group_target_webhooks" {
   sensitive = true
 }
 
+variable "resource_group_teams_target_webhooks" {
+  description = <<DOC
+  Teams webhook destinations keyed by the Resource Group you want to collect webhooks from.
+  Include an optional override for sev1 alarms by populating 'sev1_webhook_url'.
+  If 'message_tag' is populated, it will be included as the first message line in Teams. You can use this for tagging users
+  DOC
+  type = map(
+    object({
+      webhook_url       = string
+      message_tag       = optional(string, "<!here>")
+      error_webhook_url = optional(string, "")
+      error_message_tag = optional(string, "<!here>")
+      sev1_webhook_url  = optional(string, "")
+      sev1_message_tag  = optional(string, "<!channel>")
+    })
+  )
+  default   = {}
+  sensitive = true
+}
+
 variable "key_vault_access_ipv4" {
   description = "A list of IPv4 Addresses that are allowed to connect to the Key Vault"
   default     = []
@@ -87,6 +107,13 @@ variable "waf_logs_channel_id" {
 
 variable "waf_logs_webhook_url" {
   description = "Slack webhook URL for WAF Logs"
+  type        = string
+  default     = ""
+  sensitive   = true
+}
+
+variable "waf_logs_teams_webhook_url" {
+  description = "Teams webhook URL for WAF Logs"
   type        = string
   default     = ""
   sensitive   = true
