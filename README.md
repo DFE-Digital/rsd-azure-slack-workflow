@@ -43,7 +43,7 @@ key                  = "terraform.tstate"
 ## Requirements
 
 | Name | Version |
-|------|---------|
+| ---- | ------- |
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.13.3 |
 | <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm) | >= 3.51.0 |
 
@@ -54,7 +54,7 @@ No providers.
 ## Modules
 
 | Name | Source | Version |
-|------|--------|---------|
+| ---- | ------ | ------- |
 | <a name="module_azurerm_key_vault"></a> [azurerm\_key\_vault](#module\_azurerm\_key\_vault) | github.com/DFE-Digital/terraform-azurerm-key-vault-tfvars | v0.5.1 |
 | <a name="module_azurerm_logic_app_workflow"></a> [azurerm\_logic\_app\_workflow](#module\_azurerm\_logic\_app\_workflow) | github.com/DFE-Digital/terraform-azurerm-logic-app-workflow-slack | v1.4.0 |
 | <a name="module_azurerm_logic_app_workflow_teams"></a> [azurerm\_logic\_app\_workflow\_teams](#module\_azurerm\_logic\_app\_workflow\_teams) | github.com/DFE-Digital/terraform-azurerm-logic-app-workflow-teams | v0.1.0 |
@@ -66,7 +66,7 @@ No resources.
 ## Inputs
 
 | Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:--------:|
+| ---- | ----------- | ---- | ------- | :------: |
 | <a name="input_azure_client_id"></a> [azure\_client\_id](#input\_azure\_client\_id) | Service Principal Client ID | `string` | n/a | yes |
 | <a name="input_azure_client_secret"></a> [azure\_client\_secret](#input\_azure\_client\_secret) | Service Principal Client Secret | `string` | n/a | yes |
 | <a name="input_azure_location"></a> [azure\_location](#input\_azure\_location) | Azure location in which to launch resources. | `string` | n/a | yes |
